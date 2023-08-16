@@ -1,3 +1,12 @@
+## The Webflow fork of the React Refresh Webpack Plugin
+
+We have specific issues with the refresh when it interacts with the way our react
+controls are built, so we had to comment out specific `accept()` code in
+`lib/runtime/RefreshUtils.js` to allow module changes to bubble up to a root where
+we insert `accept()` directly into the code.
+
+The upstream README is included below.
+
 # React Refresh Webpack Plugin
 
 [circleci]: https://app.circleci.com/pipelines/github/pmmmwh/react-refresh-webpack-plugin
